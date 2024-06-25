@@ -3,10 +3,29 @@
 DiceRoller is a simple C# console application that simulates rolling multiple dice, calculates statistics on the results, and displays the output.
 
 ## Installation
-1. Go to the releases.
-2. Download the latest version of DiceRoller.zip.
+
+### Windows
+1. Go to the [Releases](https://github.com/FelixGoehring/DiceRoller/releases)
+2. Download the latest version of `DiceRoller_Windows.zip`.
 3. Extract the contents of the zip file.
-4. Open the DiceRoller.exe file to run the application.
+4. Ensure that the .NET Runtime is installed. You can download it from [here](https://dotnet.microsoft.com/en-us/download).
+5. Open the `DiceRoller.exe` file to run the application.
+
+### Linux
+1. Go to the [Releases](https://github.com/FelixGoehring/DiceRoller/releases)
+2. Download the latest version of `DiceRoller_Linux.zip`.
+3. Extract the contents of the zip file.
+4. Ensure that the .NET Runtime is installed. Use the following commands'
+```
+sudo apt install snap
+sudo snap install dotnet-sdk --classic
+```
+5. Open a terminal in the directory where the extracted files are located.
+6. Run the application with:
+```
+dotnet DiceRoller.dll
+```
+
 
 ## Running the Application
 When you run the application, you will be prompted for the following inputs:
