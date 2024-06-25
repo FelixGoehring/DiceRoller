@@ -12,6 +12,7 @@ on:
 jobs:
   build:
 
+    uses: actions/upload-artifact@v4.3.3
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +25,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Publish
-      run: dotnet publish -c Release out
-  
-  
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.3
+      with:
+        # Artifact name
+        name: artifact # optional, default is artifact
+        # A file, directory or wildcard pattern that describes what to upload
+        path: DiceRoller/bin/Debug/net8.0
+        # The desired behavior if no files are found using the provided path
